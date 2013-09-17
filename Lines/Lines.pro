@@ -1,0 +1,10 @@
+CONFIG += qt
+HEADERS += lines.h
+HEADERS += game.h
+HEADERS += scores.h
+HEADERS += PaintObject.h
+SOURCES += main.cpp
+SOURCES += lines.cpp
+SOURCES += game.cpp
+SOURCES += scores.cpp
+SOURCES += PaintObject.cpp
