@@ -59,14 +59,15 @@ void GamePoint::paint(){
 	glTranslatef(x,y,0);
 
 	if(active){
-		glPointSize(32);
 		glColor3f(0,0,0);
-		glBegin(GL_POINTS);
-			glVertex2f(0,0);
+		glBegin(GL_QUADS);
+			glVertex2f(-25,25);
+			glVertex2f(25,25);
+			glVertex2f(25,-25);
+			glVertex2f(-25,-25);
 		glEnd();
 	}
 	
-	glPointSize(26);
 	switch(color){
 		case 0: {glColor3f(0,0,1); break;}
 		case 1: {glColor3f(0,1,0); break;}
@@ -79,8 +80,11 @@ void GamePoint::paint(){
 	}
 
 	glLoadName(id);
-	glBegin(GL_POINTS);
-		glVertex2f(0,0);
+	glBegin(GL_QUADS);
+		glVertex2f(-22,22);
+		glVertex2f(22,22);
+		glVertex2f(22,-22);
+		glVertex2f(-22,-22);
 	glEnd();
 }
 
